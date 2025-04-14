@@ -32,9 +32,11 @@ map("n", "<leader>fb", builtin.buffers, { desc = "Open Telescope to list buffers
 map("n", "<leader>fh", builtin.help_tags, { desc = "Open Telescope to show help" })
 map("n", "<leader>fo", builtin.oldfiles, { desc = "Open Telescope to list recent files" })
 map("n", "<leader>cm", builtin.git_commits, { desc = "Open Telescope to list git commits" })
+map("n", "gr", builtin.lsp_references	, { desc = "Lists LSP references for word under the cursor" })
+map("n", "gd", builtin.lsp_definitions, { desc = "Goto the definition of the word under the cursor" })
 -- NvimTree
-map("n", "<leader>n", ":NvimTreeToggle<CR>", { desc = "Toggle NvimTree sidebar" })    -- open/close
-map("n", "<leader>nr", ":NvimTreeRefresh<CR>", { desc = "Refresh NvimTree" })         -- refresh
+map("n", "<leader>e", ":NvimTreeToggle<CR>", { desc = "Toggle NvimTree sidebar" })    -- open/close
+map("n", "<leader>er", ":NvimTreeRefresh<CR>", { desc = "Refresh NvimTree" })         -- refresh
 map("n", "<leader>nf", ":NvimTreeFindFile<CR>", { desc = "Search file in NvimTree" }) -- search file
 
 -- LSP

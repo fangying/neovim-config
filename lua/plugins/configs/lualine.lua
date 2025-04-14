@@ -15,7 +15,7 @@ local lualine_require = require("lualine_require")
 
 local function loadcolors()
     -- Rose-pine palette
-    local rosepine = require("rose-pine.palette")
+    local rosepine = require("github-theme.palette")
     local colors = {
         bg = rosepine.base,
         fg = rosepine.text,

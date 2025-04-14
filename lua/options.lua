@@ -122,8 +122,8 @@ for _, plugin in pairs(disabled_built_ins) do
 end
 
 -- Colorscheme
--- By default, use rose-pine
-cmd.colorscheme("rose-pine")
+-- By default, use github-theme
+cmd.colorscheme("github_dark_colorblind")
 
 -- Enable virtual_lines feature if the current nvim version is 0.11+
 if vim.fn.has('nvim-0.11') > 0 then

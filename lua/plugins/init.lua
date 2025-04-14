@@ -82,12 +82,15 @@ local builtin_plugins = {
     },
     -- colorscheme
     {
-        -- Rose-pine - Soho vibes for Neovim
-        "rose-pine/neovim",
-        name = "rose-pine",
-        opts = {
-            dark_variant = "main"
-        }
+        "projekt0n/github-nvim-theme",
+        name = 'github-theme',
+        lazy = false, -- make sure we load this during startup if it is your main colorscheme
+        priority = 1000, -- make sure to load this before all the other start plugins
+        config = function()
+          require('github-theme').setup({
+        })
+	      vim.cmd('colorscheme github_dark_colorblind')
+        end,
     },
     -- LSP stuffs
     -- Portable package manager for Neovim that runs everywhere Neovim runs.
@@ -197,7 +200,7 @@ require("lazy").setup({
         -- install missing plugins on startup
         missing = true,
         -- try to load one of these colorschemes when starting an installation during startup
-        colorscheme = { "rose-pine", "habamax" }
+        colorscheme = { "github-theme", "habamax" }
     },
     checker = {
         -- automatically check for plugin updates
